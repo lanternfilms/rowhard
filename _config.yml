@@ -31,8 +31,7 @@ prose:
               value: "screenings"
             - name: "Contact"
               value: "contact"
-      - name: "title"
+      - name: "date"
         field:
           element: "text"
-          label: "Title"
-          value: ""
+          label: "Date"
