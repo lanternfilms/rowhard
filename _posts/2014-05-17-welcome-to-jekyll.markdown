@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Testing editor
-date: {}
+date: 2014-05-17
 published: true
 category: trailer
 ---
