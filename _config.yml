@@ -1,0 +1,10 @@
+# Site settings
+title: Row Hard No Excuses
+email: jamiefolsom@gmail.com
+description: ""
+baseurl: ""
+url: "http://rowhardnoexcuses.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
