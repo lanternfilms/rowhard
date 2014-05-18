@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Welcome to Jekyll!"
-date: 2014-05-17
+title: Testing editor
+date: {}
 published: true
+category: trailer
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
