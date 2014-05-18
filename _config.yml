@@ -8,3 +8,93 @@ url: "http://rowhardnoexcuses.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+prose:
+  rooturl: '_posts'
+  siteurl: "http://lanternfilms.github.io/rowhard"
+  relativeLinks: 'http://smnookin.github.io/links.jsonp'
+  media: 'assets'
+  metadata:
+    _posts:
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Publish"
+      - name: "author"
+        field:
+          element: "text"
+          label: "Author"
+          placeholder: "Enter the name of the Author of this article"
+      - name: "link"
+        field:
+          element: "text"
+          label: "External Link"
+          placeholder: "Enter link to an external article"
+      - name: "displaydate"
+        field:
+          element: "text"
+          label: "Publish Date"
+          value: ""
+      - name: "date"
+        field:
+          element: "text"
+          label: "Order"
+          value: ""
+      - name: "category"
+        field:
+          element: "select"
+          label: "Genre"
+          options:
+            - name: "Science"
+              value: "science"
+            - name: "Politics"
+              value: "politics"
+            - name: "Arts"
+              value: "arts"
+            - name: "Course info"
+              value: "course"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Reading"
+              value: "reading"
+            - name: "Student work"
+              value: "student"
+            - name: "Slider"
+              value: "slider"
+            - name: "1st image box on homepage"
+              value: "image1"
+            - name: "2nd image box on homepage"
+              value: "image2"
+            - name: "3rd image box on homepage"
+              value: "image3"
+            - name: "Logistics and resources"
+              value: "resources"
+
+    _posts/static:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "page"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          value: ""
