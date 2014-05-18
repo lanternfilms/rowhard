@@ -35,3 +35,4 @@ prose:
         field:
           element: "text"
           label: "Date"
+          value: ""
