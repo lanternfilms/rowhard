@@ -3,7 +3,7 @@ title: Row Hard No Excuses
 email: jamiefolsom@gmail.com
 description: ""
 baseurl: ""
-url: "http://lanternfilms.github.io/rowhard/"
+url: "http://lanternfilms.github.io/rowhard"
 
 # Build settings
 markdown: kramdown
@@ -21,7 +21,7 @@ prose:
           element: "select"
           label: "Genre"
           options:
-            - name: "Trails"
+            - name: "Trailer"
               value: "trailer"
             - name: "About"
               value: "about"
