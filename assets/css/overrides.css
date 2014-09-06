@@ -7,7 +7,7 @@
 }
 
 .orbit-container {
-  background: transparent; 
+  background: transparent;
 }
 
 #hero img {
@@ -87,4 +87,12 @@ footer {
 	padding-bottom:10px;
 	font-size: 90%;
 	position:relative;
+}
+
+.tabs.vertical {
+  width:30%;
+}
+
+.tabs-content.vertical {
+  width: 70%;
 }

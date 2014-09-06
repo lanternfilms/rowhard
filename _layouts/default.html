@@ -1,17 +1,28 @@
-{% include doctype.html %}
-<head>
-{% include head.html %}
-</head>
-
+{% include header.html %}
 <body>
-{% include nav.html %}
   <div class="row">
-    <div class="large-12 columns">
-    {{ content }}
+    <div class="large-12 columns" id="header" style="height:50px;">
+    &nbsp;
     </div>
   </div>
+  <div class="row">
+    <div class="large-6 columns" id="brand">
+      {% include brand.html %}
+    </div>
+    <!-- end brand column -->
+    <div class="large-6 columns" id="maincontent">
 
+        <dd class="active"><a href="#home">Home</a></dd>
+        <dd><a href="#about">About</a></dd>
+        <dd><a href="#trailer">Trailer</a></dd>
+        <dd><a href="#screenings">Screenings</a></dd>
+        <dd><a href="#press">Press</a></dd>
+        <dd><a href="#contact">Contact</a></dd>
+
+      <div class="tabs-content vertical">
+        {{ content }}
+      </div>
+    </div>
+    <!-- end content column -->
+ <!-- end content row -->
 {% include footer.html %}
-{% include scripts.html %}
-</body>
-</html>

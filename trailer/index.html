@@ -1,18 +1,10 @@
 ---
-layout: section
+layout: default
 title: Trailer
 ---
-<div class="row">
-  <div class="large-12 columns">
-    <h1 class="subheader">{{ page.title }}</h1>
-  </div>
-</div>
 
+<h2 class="subheader">{{ page.title }}</h2>
 {% for post in site.categories.trailer %}
-<div class="row feature">
-  <div class="large-12 columns item">
-    <h2 class="subheader"><a href="{{ post.link }}">{{ post.title}}</a> <small>{{ post.author}}, {{ post.displaydate | date: "%B %d %Y" }}</small></h2>
-    {{ post.excerpt }}
-  </div>
-</div>
+<h3 class="subheader"><a href="{{ post.link }}">{{ post.title}}</a> <small>{{ post.author}}, {{ post.displaydate | date: "%B %d %Y" }}</small></h3>
+{{ post.excerpt }}
 {% endfor %}

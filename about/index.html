@@ -1,0 +1,14 @@
+---
+layout: default
+title: About
+---
+
+<h2 class="subheader">{{ page.title }}</h2>
+
+<div class="content" id="Contact">
+  {% for post in site.categories.about %}
+    <a href="{{ post.link }}">{{ post.title}}</a>
+    {{ post.excerpt }}
+  {% endfor %}
+</div>
+
