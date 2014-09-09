@@ -14,16 +14,20 @@ body {
   line-height: 1.5;
   font-weight: 300;
   background-color: #fdfdfd;
-  background-image: url("/images/background.png");
+  /*background-image: url("/images/background.png");*/
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  vertical-align: top;
+  vertical-align: auto;
 }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
 
+/*div, ul {
+  border: 1px solid #ccc;
+}
+*/
 a         { color: #2a7ae2; text-decoration: none; }
 a:hover   { color: #000; text-decoration: underline; }
 a:visited { color: #205caa; }
@@ -408,4 +412,14 @@ a:visited { color: #205caa; }
     width: auto;
     margin: 0 0 15px; }
 
+}
+
+#navigation dl dd {
+margin-bottom: 0;
+line-height: 1.4em;
+}
+
+.tabs dd > a, .tabs dd > a:hover {
+  padding: 0px;
+  background-color: transparent;
 }

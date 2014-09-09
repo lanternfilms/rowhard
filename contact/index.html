@@ -3,9 +3,10 @@ layout: default
 title: Contact
 ---
 
-<h2 class="subheader">{{ page.title }}</h2>
-
-{% for post in site.categories.contact %}
-  <h3 class="subheader"><a href="{{ post.link }}">{{ post.title}}</a> <small>{{ post.author}}, {{ post.displaydate | date: "%B %d %Y" }}</small></h3>
-  {{ post.excerpt }}
-{% endfor %}
+<div class="content" id="Contact">
+  <h2 class="subheader">{{ page.title }}</h2>
+  {% for post in site.categories.contact %}
+    <a href="{{ post.link }}">{{ post.title}}</a>
+    {{ post.excerpt }}
+  {% endfor %}
+</div>
