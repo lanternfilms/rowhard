@@ -2,6 +2,8 @@
 published: true
 category: screenings
 date: "2014-09-09"
+layout: post
+title: Screenings
 ---
 
 ## Screenings

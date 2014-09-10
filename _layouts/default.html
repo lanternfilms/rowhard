@@ -21,7 +21,13 @@
     </div>
     <div class="large-5 columns" id="maincontent">
       <div class="tabs-content">
-        <div class="content active" id="about">
+        <div class="content active" id="home">
+          {% for post in site.categories.home %}
+            <a href="{{ post.link }}">{{ post.title}}</a>
+            {{ post.excerpt }}
+          {% endfor %}
+        </div>
+        <div class="content" id="about">
           {% for post in site.categories.about %}
             <a href="{{ post.link }}">{{ post.title}}</a>
             {{ post.excerpt }}
