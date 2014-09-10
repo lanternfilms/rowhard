@@ -6,6 +6,4 @@ layout: post
 title: Screenings
 ---
 
-## Screenings
-
 This is the first post about screenings.

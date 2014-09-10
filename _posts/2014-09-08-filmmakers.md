@@ -6,8 +6,6 @@ title: Filmmakers
 date: "2014-09-08"
 ---
 
-## Filmmakers
-
 <b>Luke Wolbach</b> (Producer, Director, Camera, Editor)
 Luke is an award-winning filmmaker and editor residing in San Francisco. His first film, <i>Seeds of Tibet: Voices of Children in Exile</i>, which he co-produced and co-directed, was a half hour documentary about the lives of young Tibetan refugees at a school in Northern India. It was broadcast by PBS affiliates throughout the country and was awarded an Earthwatch Award, a Cine Eagle Award and a documentary award at the Philadelphia International Film Festival. He has worked independently as an editor on projects that have broadcast on PBS, Bravo, and the National Geographic and Sundance channels. <i>Row Hard No Excuses</i> is his first collaboration with his father, Bill Wolbach.
 

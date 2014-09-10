@@ -11,19 +11,19 @@
     </div><!-- end brand column -->
     <div class="large-2 columns" id="navigation">
     <dl class="tabs vertical" data-tab>
-        <dd class="active"><a href="#home">Home</a></dd>
-        <dd><a href="#about">About</a></dd>
         <dd><a href="#trailer">Trailer</a></dd>
-        <dd><a href="#screenings">Screenings</a></dd>
+        <dd><a href="#about">About</a></dd>
+        <dd><a href="#photos">Photos</a></dd>
         <dd><a href="#press">Press</a></dd>
+        <dd><a href="#screenings">Screenings</a></dd>
         <dd><a href="#contact">Contact</a></dd>
+        <dd><a href="#buy">Buy the DVD</a></dd>
     </dl>
     </div>
     <div class="large-5 columns" id="maincontent">
       <div class="tabs-content">
         <div class="content active" id="home">
           {% for post in site.categories.home %}
-            <a href="{{ post.link }}">{{ post.title}}</a>
             {{ post.content }}
           {% endfor %}
         </div>
@@ -53,6 +53,12 @@
         </div>
         <div class="content" id="contact">
           {% for post in site.categories.contact %}
+            <a href="{{ post.link }}">{{ post.title}}</a>
+            {{ post.content }}
+          {% endfor %}
+        </div>
+        <div class="content" id="buy">
+          {% for post in site.categories.buy %}
             <a href="{{ post.link }}">{{ post.title}}</a>
             {{ post.content }}
           {% endfor %}

@@ -6,8 +6,6 @@ title: Characters
 date: "2014-09-08"
 ---
 
-## Synopsis
-
 <b>John Zeigler</b> (Rower)
 John was just a teenager when he first dreamed of rowing the Atlantic. Born and raised in New Jersey, he is the father of two girls. Every morning at 4:00 am, he and his brother, Danny, open the doors to their food wholesaling business, which he started with his father in the mid-1980s. A self-described fitness fanatic, John is a marathon canoe racer with rugged good looks and the upper body of a football player. His decision to pursue the race was the last straw that ended his marriage.
 
