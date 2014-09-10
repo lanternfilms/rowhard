@@ -24,37 +24,37 @@
         <div class="content active" id="home">
           {% for post in site.categories.home %}
             <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.excerpt }}
+            {{ post.content }}
           {% endfor %}
         </div>
         <div class="content" id="about">
           {% for post in site.categories.about %}
             <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.excerpt }}
+            {{ post.content }}
           {% endfor %}
         </div>
         <div class="content" id="trailer">
           {% for post in site.categories.trailer %}
             <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.excerpt }}
+            {{ post.content }}
           {% endfor %}
         </div>
         <div class="content" id="screenings">
           {% for post in site.categories.screenings %}
             <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.excerpt }}
+            {{ post.content }}
           {% endfor %}
         </div>
         <div class="content" id="press">
           {% for post in site.categories.press %}
             <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.excerpt }}
+            {{ post.content }}
           {% endfor %}
         </div>
         <div class="content" id="contact">
           {% for post in site.categories.contact %}
             <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.excerpt }}
+            {{ post.content }}
           {% endfor %}
         </div>
       </div>
