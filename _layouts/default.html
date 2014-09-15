@@ -23,54 +23,138 @@
     <div class="large-5 columns" id="maincontent">
       <div class="tabs-content">
         <div class="content active" id="home">
+
           <dl class="tabs" data-tab>
             {% for post in site.categories.home %}
-            <dd class="active"><a href="#{{ post.title }}">{{ post.title }}</a></dd>
+            <dd><a href="#{{ post.title | slugify }}">{{ post.title }}</a></dd>
             {% endfor %}
           </dl>
           <div class="tabs-content">
-          {% for post in site.categories.home %}
-            <div class="content active" id="{{ post.title }}">
+            {% for post in site.categories.home %}
+            <div class="content" id="{{ post.title | slugify }}">
               {{ post.content }}
             </div>
-          {% endfor %}
+            {% endfor %}
           </div>
+
         </div>
         <div class="content" id="about">
-          {% for post in site.categories.about %}
-            <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.content }}
-          {% endfor %}
+
+          <dl class="tabs" data-tab>
+            {% for post in site.categories.about %}
+            <dd><a href="#{{ post.title | slugify }}">{{ post.title }}</a></dd>
+            {% endfor %}
+          </dl>
+          <div class="tabs-content">
+            {% for post in site.categories.about %}
+            <div class="content" id="{{ post.title | slugify }}">
+              {{ post.content }}
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
+        <div class="content" id="photos">
+
+          <dl class="tabs" data-tab>
+            {% for post in site.categories.photos %}
+            <dd><a href="#{{ post.title | slugify }}">{{ post.title }}</a></dd>
+            {% endfor %}
+          </dl>
+          <div class="tabs-content">
+            {% for post in site.categories.photos %}
+            <div class="content" id="{{ post.title | slugify }}">
+              {{ post.content }}
+            </div>
+            {% endfor %}
+          </div>
+
         </div>
         <div class="content" id="trailer">
-          {% for post in site.categories.trailer %}
-            <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.content }}
-          {% endfor %}
+
+          <dl class="tabs" data-tab>
+            {% for post in site.categories.trailer %}
+            <dd><a href="#{{ post.title | slugify }}">{{ post.title }}</a></dd>
+            {% endfor %}
+          </dl>
+          <div class="tabs-content">
+            {% for post in site.categories.trailer %}
+            <div class="content" id="{{ post.title | slugify }}">
+              {{ post.content }}
+            </div>
+            {% endfor %}
+          </div>
+
         </div>
         <div class="content" id="screenings">
-          {% for post in site.categories.screenings %}
-            <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.content }}
-          {% endfor %}
+
+
+          <dl class="tabs" data-tab>
+            {% for post in site.categories.screenings %}
+            <dd><a href="#{{ post.title | slugify }}">{{ post.title }}</a></dd>
+            {% endfor %}
+          </dl>
+          <div class="tabs-content">
+            {% for post in site.categories.screenings %}
+            <div class="content" id="{{ post.title | slugify }}">
+              {{ post.content }}
+            </div>
+            {% endfor %}
+          </div>
+
+
         </div>
         <div class="content" id="press">
-          {% for post in site.categories.press %}
-            <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.content }}
-          {% endfor %}
+
+          <dl class="tabs" data-tab>
+            {% for post in site.categories.press %}
+            <dd><a href="#{{ post.title | slugify }}">{{ post.title }}</a></dd>
+            {% endfor %}
+          </dl>
+          <div class="tabs-content">
+            {% for post in site.categories.press %}
+            <div class="content" id="{{ post.title | slugify }}">
+              {{ post.content }}
+            </div>
+            {% endfor %}
+          </div>
+
+
         </div>
         <div class="content" id="contact">
-          {% for post in site.categories.contact %}
-            <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.content }}
-          {% endfor %}
+
+
+          <dl class="tabs" data-tab>
+            {% for post in site.categories.contact %}
+            <dd><a href="#{{ post.title | slugify }}">{{ post.title }}</a></dd>
+            {% endfor %}
+          </dl>
+          <div class="tabs-content">
+            {% for post in site.categories.contact %}
+            <div class="content" id="{{ post.title | slugify }}">
+              {{ post.content }}
+            </div>
+            {% endfor %}
+          </div>
+
+
         </div>
         <div class="content" id="buy">
-          {% for post in site.categories.buy %}
-            <a href="{{ post.link }}">{{ post.title}}</a>
-            {{ post.content }}
-          {% endfor %}
+
+
+          <dl class="tabs" data-tab>
+            {% for post in site.categories.buy %}
+            <dd><a href="#{{ post.title | slugify }}">{{ post.title }}</a></dd>
+            {% endfor %}
+          </dl>
+          <div class="tabs-content">
+            {% for post in site.categories.buy %}
+            <div class="content" id="{{ post.title | slugify }}">
+              {{ post.content }}
+            </div>
+            {% endfor %}
+          </div>
+
         </div>
       </div>
     </div>
