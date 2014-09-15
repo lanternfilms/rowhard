@@ -426,6 +426,9 @@ a:visited { color: #205caa; }
   background-color: transparent;
 }
 
-.tabs dd {
+.tabs.horizontal dd {
+  padding: 0 5px;
   border: 1px solid #ccc;
+/*  border-color: #ccc;
+  border-style: solid;*/ 
 }

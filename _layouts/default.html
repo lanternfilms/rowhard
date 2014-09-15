@@ -22,14 +22,14 @@
     </div>
     <div class="large-5 columns" id="maincontent">
       <div class="tabs-content">
-        <div class="content active" id="home">
+        <div class="content" id="home">
 
-          <dl class="tabs" data-tab>
+          <dl class="tabs horizontal" data-tab>
             {% for post in site.categories.home %}
             <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
             {% endfor %}
           </dl>
-          <div class="tabs-content">
+          <div class="tabs-content horizontal">
             {% for post in site.categories.home %}
             <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
               {{ post.content }}
@@ -40,12 +40,12 @@
         </div>
         <div class="content" id="about">
 
-          <dl class="tabs" data-tab>
+          <dl class="tabs horizontal" data-tab>
             {% for post in site.categories.about %}
             <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
             {% endfor %}
           </dl>
-          <div class="tabs-content">
+          <div class="tabs-content horizontal">
             {% for post in site.categories.about %}
             <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
               {{ post.content }}
@@ -56,12 +56,12 @@
         </div>
         <div class="content" id="photos">
 
-          <dl class="tabs" data-tab>
+          <dl class="tabs horizontal" data-tab>
             {% for post in site.categories.photos %}
             <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
             {% endfor %}
           </dl>
-          <div class="tabs-content">
+          <div class="tabs-content horizontal">
             {% for post in site.categories.photos %}
             <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
               {{ post.content }}
@@ -72,12 +72,12 @@
         </div>
         <div class="content" id="trailer">
 
-          <dl class="tabs" data-tab>
+          <dl class="tabs horizontal" data-tab>
             {% for post in site.categories.trailer %}
             <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
             {% endfor %}
           </dl>
-          <div class="tabs-content">
+          <div class="tabs-content horizontal">
             {% for post in site.categories.trailer %}
             <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
               {{ post.content }}
@@ -89,12 +89,12 @@
         <div class="content" id="screenings">
 
 
-          <dl class="tabs" data-tab>
+          <dl class="tabs horizontal" data-tab>
             {% for post in site.categories.screenings %}
             <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
             {% endfor %}
           </dl>
-          <div class="tabs-content">
+          <div class="tabs-content horizontal">
             {% for post in site.categories.screenings %}
             <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
               {{ post.content }}
@@ -106,12 +106,12 @@
         </div>
         <div class="content" id="press">
 
-          <dl class="tabs" data-tab>
+          <dl class="tabs horizontal" data-tab>
             {% for post in site.categories.press %}
             <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
             {% endfor %}
           </dl>
-          <div class="tabs-content">
+          <div class="tabs-content horizontal">
             {% for post in site.categories.press %}
             <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
               {{ post.content }}
@@ -124,12 +124,12 @@
         <div class="content" id="contact">
 
 
-          <dl class="tabs" data-tab>
+          <dl class="tabs horizontal" data-tab>
             {% for post in site.categories.contact %}
             <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
             {% endfor %}
           </dl>
-          <div class="tabs-content">
+          <div class="tabs-content horizontal">
             {% for post in site.categories.contact %}
             <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
               {{ post.content }}
@@ -142,12 +142,12 @@
         <div class="content" id="buy">
 
 
-          <dl class="tabs" data-tab>
+          <dl class="tabs horizontal" data-tab>
             {% for post in site.categories.buy %}
             <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
             {% endfor %}
           </dl>
-          <div class="tabs-content">
+          <div class="tabs-content horizontal">
             {% for post in site.categories.buy %}
             <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
               {{ post.content }}
