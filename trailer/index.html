@@ -8,7 +8,7 @@ title: Trailer
 <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
 {% endfor %}
 </dl>
-<div id="trailer">
+<div id="trailer" class="contentblock">
   <div class="tabs-content horizontal">
     {% for post in site.categories.trailer %}
     <div class="content{% if forloop.first %} active{% endif %}" id="{{ post.title | downcase | split: " " | join: "-" }}">

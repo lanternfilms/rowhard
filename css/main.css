@@ -436,3 +436,8 @@ a:visited { color: #205caa; }
 .tabs-content .content .active {
   display:block;
 }
+
+.contentblock {
+  background-color: rgba(100, 100, 120, 0.6);
+  padding:0 10px;
+}

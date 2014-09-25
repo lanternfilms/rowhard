@@ -8,7 +8,7 @@ title: Buy
 <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
 {% endfor %}
 </dl>
-<div id="buy">
+<div id="buy" class="contentblock">
   <div class="tabs-content horizontal">
     {% for post in site.categories.buy %}
     <div class="content{% if forloop.first %} active{% endif %}" id="{{ post.title | downcase | split: " " | join: "-" }}">

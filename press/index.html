@@ -8,7 +8,7 @@ title: Press
 <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
 {% endfor %}
 </dl>
-<div id="press">
+<div id="press" class="contentblock">
   <div class="tabs-content horizontal">
     {% for post in site.categories.press %}
     <div class="content{% if forloop.first %} active{% endif %}" id="{{ post.title | downcase | split: " " | join: "-" }}">
