@@ -8,7 +8,7 @@ title: Buy
 <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
 {% endfor %}
 </dl>
-<div class="content" id="buy">
+<div id="buy">
   <div class="tabs-content horizontal">
     {% for post in site.categories.buy %}
     <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
