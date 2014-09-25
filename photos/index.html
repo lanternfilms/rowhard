@@ -1,16 +1,16 @@
 ---
 layout: section
-title: Trailer
+title: Photos
 ---
 
 <dl class="tabs horizontal" data-tab>
-{% for post in site.categories.trailer %}
+{% for post in site.categories.photos %}
 <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
 {% endfor %}
 </dl>
-<div class="content" id="trailer">
+<div class="content" id="photos">
   <div class="tabs-content horizontal">
-    {% for post in site.categories.trailer %}
+    {% for post in site.categories.photos %}
     <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
       {{ post.content }}
     </div>

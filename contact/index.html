@@ -1,12 +1,19 @@
 ---
-layout: default
+layout: section
 title: Contact
 ---
 
-<div class="content" id="Contact">
-  <h2 class="subheader">{{ page.title }}</h2>
-  {% for post in site.categories.contact %}
-    <a href="{{ post.link }}">{{ post.title}}</a>
-    {{ post.excerpt }}
-  {% endfor %}
+<dl class="tabs horizontal" data-tab>
+{% for post in site.categories.contact %}
+<dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
+{% endfor %}
+</dl>
+<div class="content" id="contact">
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.contact %}
+    <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ post.content }}
+    </div>
+    {% endfor %}
+  </div>
 </div>

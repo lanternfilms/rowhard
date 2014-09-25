@@ -1,14 +1,109 @@
 ---
 layout: default
+title: Home
 ---
 
-<div id="home">
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
+<div class="content" id="home">
+  <dl class="tabs horizontal" data-tab>
+    {% for post in site.categories.home %}
+    <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
     {% endfor %}
-  </ul>
+  </dl>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.home %}
+    <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
 </div>
+
+
+<div class="content" id="photos">
+  <dl class="tabs horizontal" data-tab>
+    {% for post in site.categories.photos %}
+    <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
+    {% endfor %}
+  </dl>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.photos %}
+    <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="content" id="trailer">
+  <dl class="tabs horizontal" data-tab>
+    {% for post in site.categories.trailer %}
+    <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
+    {% endfor %}
+  </dl>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.trailer %}
+    <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="content" id="screenings">
+  <dl class="tabs horizontal" data-tab>
+    {% for post in site.categories.screenings %}
+    <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
+    {% endfor %}
+  </dl>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.screenings %}
+    <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="content" id="press">
+  <dl class="tabs horizontal" data-tab>
+    {% for post in site.categories.press %}
+    <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
+    {% endfor %}
+  </dl>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.press %}
+    <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="content" id="contact">
+  <dl class="tabs horizontal" data-tab>
+    {% for post in site.categories.contact %}
+    <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
+    {% endfor %}
+  </dl>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.contact %}
+    <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="content" id="buy">
+  <dl class="tabs horizontal" data-tab>
+    {% for post in site.categories.buy %}
+    <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
+    {% endfor %}
+  </dl>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.buy %}
+    <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>

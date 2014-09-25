@@ -2,7 +2,7 @@
 published: true
 category: about
 layout: post
-title: Characters
+title:  Characters
 date: "2014-09-08"
 ---
 

@@ -1,13 +1,19 @@
 ---
-layout: default
+layout: section
 title: About
 ---
 
-<div class="content" id="Contact">
-  <h2 class="subheader">{{ page.title }}</h2>
-  {% for post in site.categories.about %}
-    <a href="{{ post.link }}">{{ post.title}}</a>
-    {{ post.excerpt }}
-  {% endfor %}
+<dl class="tabs horizontal" data-tab>
+{% for post in site.categories.about %}
+<dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
+{% endfor %}
+</dl>
+<div class="content" id="about">
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.about %}
+    <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ post.content }}
+    </div>
+    {% endfor %}
+  </div>
 </div>
-

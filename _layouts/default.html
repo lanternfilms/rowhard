@@ -1,4 +1,7 @@
-{% include header.html %}
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+{% include head.html %}
 <body>
   <div class="row">
     <div class="large-12 columns" id="header" style="height:50px;">
@@ -6,158 +9,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="large-5 columns" id="brand">
-      {% include brand.html %}
-    </div><!-- end brand column -->
-    <div class="large-2 columns" id="navigation">
-    <dl class="tabs vertical" data-tab>
-        <dd><a href="#trailer">Trailer</a></dd>
-        <dd><a href="#about">About</a></dd>
-        <dd><a href="#photos">Photos</a></dd>
-        <dd><a href="#press">Press</a></dd>
-        <dd><a href="#screenings">Screenings</a></dd>
-        <dd><a href="#contact">Contact</a></dd>
-        <dd><a href="#buy">Buy the DVD</a></dd>
-    </dl>
-    </div>
+    {% include brand.html %}
+
+    {% include nav.html %}
+    
     <div class="large-5 columns" id="maincontent">
       <div class="tabs-content">
-        <div class="content" id="home">
-
-          <dl class="tabs horizontal" data-tab>
-            {% for post in site.categories.home %}
-            <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
-            {% endfor %}
-          </dl>
-          <div class="tabs-content horizontal">
-            {% for post in site.categories.home %}
-            <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
-              {{ post.content }}
-            </div>
-            {% endfor %}
-          </div>
-
-        </div>
-        <div class="content" id="about">
-
-          <dl class="tabs horizontal" data-tab>
-            {% for post in site.categories.about %}
-            <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
-            {% endfor %}
-          </dl>
-          <div class="tabs-content horizontal">
-            {% for post in site.categories.about %}
-            <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
-              {{ post.content }}
-            </div>
-            {% endfor %}
-          </div>
-
-        </div>
-        <div class="content" id="photos">
-
-          <dl class="tabs horizontal" data-tab>
-            {% for post in site.categories.photos %}
-            <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
-            {% endfor %}
-          </dl>
-          <div class="tabs-content horizontal">
-            {% for post in site.categories.photos %}
-            <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
-              {{ post.content }}
-            </div>
-            {% endfor %}
-          </div>
-
-        </div>
-        <div class="content" id="trailer">
-
-          <dl class="tabs horizontal" data-tab>
-            {% for post in site.categories.trailer %}
-            <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
-            {% endfor %}
-          </dl>
-          <div class="tabs-content horizontal">
-            {% for post in site.categories.trailer %}
-            <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
-              {{ post.content }}
-            </div>
-            {% endfor %}
-          </div>
-
-        </div>
-        <div class="content" id="screenings">
-
-
-          <dl class="tabs horizontal" data-tab>
-            {% for post in site.categories.screenings %}
-            <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
-            {% endfor %}
-          </dl>
-          <div class="tabs-content horizontal">
-            {% for post in site.categories.screenings %}
-            <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
-              {{ post.content }}
-            </div>
-            {% endfor %}
-          </div>
-
-
-        </div>
-        <div class="content" id="press">
-
-          <dl class="tabs horizontal" data-tab>
-            {% for post in site.categories.press %}
-            <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
-            {% endfor %}
-          </dl>
-          <div class="tabs-content horizontal">
-            {% for post in site.categories.press %}
-            <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
-              {{ post.content }}
-            </div>
-            {% endfor %}
-          </div>
-
-
-        </div>
-        <div class="content" id="contact">
-
-
-          <dl class="tabs horizontal" data-tab>
-            {% for post in site.categories.contact %}
-            <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
-            {% endfor %}
-          </dl>
-          <div class="tabs-content horizontal">
-            {% for post in site.categories.contact %}
-            <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
-              {{ post.content }}
-            </div>
-            {% endfor %}
-          </div>
-
-
-        </div>
-        <div class="content" id="buy">
-
-
-          <dl class="tabs horizontal" data-tab>
-            {% for post in site.categories.buy %}
-            <dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
-            {% endfor %}
-          </dl>
-          <div class="tabs-content horizontal">
-            {% for post in site.categories.buy %}
-            <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
-              {{ post.content }}
-            </div>
-            {% endfor %}
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!-- end content column -->
- <!-- end content row -->
+      {{ content }}
+      </div><!-- end .tabs-content -->
+    </div><!-- end #maincontent -->
+  </div><!-- end .row -->
 {% include footer.html %}
+{% include scripts.html %}
+</body>
+</html>

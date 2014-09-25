@@ -1,11 +1,24 @@
-<!-- Section Template -->
-{% include doctype.html %}
-<head>
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
 {% include head.html %}
-</head>
 <body>
-{% include nav.html %}
-{{ content }}
+  <div class="row">
+    <div class="large-12 columns" id="header" style="height:50px;">
+    &nbsp;
+    </div>
+  </div>
+  <div class="row">
+    {% include brand.html %}
+
+    {% include nav.html %}
+    
+    <div class="large-5 columns" id="maincontent">
+      <div class="tabs-content">
+      {{ content }}
+      </div><!-- end .tabs-content -->
+    </div><!-- end #maincontent -->
+  </div><!-- end .row -->
 {% include footer.html %}
 {% include scripts.html %}
 </body>

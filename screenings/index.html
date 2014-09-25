@@ -1,18 +1,19 @@
 ---
-layout: default
+layout: section
 title: Screenings
 ---
 
-<h2 class="subheader">{{ page.title }}</h2>
-
+<dl class="tabs horizontal" data-tab>
 {% for post in site.categories.screenings %}
-{% if post.tags contains 'reading' %}
-<h3 class="subheader"><a href="{{ post.link }}">{{ post.title}}</a> <small>{{ post.author}}, {{ post.displaydate | date: "%B %d %Y" }}</small></h3>
-{% else %}
-<h3 class="subheader"><a href="{{ post.url }}">{{ post.title}}</a> <small>{{ post.author}}, {{ post.displaydate | date: "%B %d %Y" }}</small></h3>
-{% endif %}
-{{ post.excerpt }}
-{% unless post.tags contains 'reading' %}
-  <a href="{{ post.url }}" title="read more" class="more">read more &raquo;</a>
-{% endunless %}
+<dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
 {% endfor %}
+</dl>
+<div class="content" id="screenings">
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.screenings %}
+    <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ post.content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
