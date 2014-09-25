@@ -11,8 +11,8 @@ title: Trailer
 <div id="trailer" class="contentblock">
   <div class="tabs-content horizontal">
     {% for post in site.categories.trailer %}
-    <div class="content{% if forloop.first %} active{% endif %}" id="{{ post.title | downcase | split: " " | join: "-" }}">
-      {{ post.content }}
+    <div class="content{% if forloop.first %} active{% endif %}" id="{{ post.title | downcase | split: " " | join: "-" }} flex-video widescreen vimeo">
+	  {{ post.content }}
     </div>
     {% endfor %}
   </div>
