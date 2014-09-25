@@ -11,7 +11,7 @@ title: Screenings
 <div id="screenings">
   <div class="tabs-content horizontal">
     {% for post in site.categories.screenings %}
-    <div class="content" id="{{ post.title | downcase | split: " " | join: "-" }}">
+    <div class="content{% if forloop.first %} active{% endif %}" id="{{ post.title | downcase | split: " " | join: "-" }}">
       {{ post.content }}
     </div>
     {% endfor %}
