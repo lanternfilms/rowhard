@@ -28,9 +28,10 @@ h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
   border: 1px solid #ccc;
 }
 */
-a         { color: #2a7ae2; text-decoration: none; }
-a:hover   { color: #000; text-decoration: underline; }
-a:visited { color: #205caa; }
+a         { color: #999; text-decoration: none; /* font-weight: 700; */}
+a:hover   { color: #F00; text-decoration: underline; }
+a:visited { /* color: #205caa; */ }
+a.active   { color: #F00; text-decoration: underline; }
 
 /* Utility */
 
@@ -426,11 +427,17 @@ a:visited { color: #205caa; }
   background-color: transparent;
 }
 
+
+.tabs dd > a.active, .tabs dd > a:hover.active {
+  color:#F00;
+}
+
 .tabs.horizontal dd {
   padding: 0 5px;
   border: 1px solid #ccc;
-/*  border-color: #ccc;
-  border-style: solid;*/ 
+  border-color: #ccc;
+  border-style: solid; 
+  background-color: #999;
 }
 
 .tabs-content .content .active {
@@ -438,6 +445,6 @@ a:visited { color: #205caa; }
 }
 
 .contentblock {
-  background-color: rgba(100, 100, 120, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   padding:0 10px;
 }
