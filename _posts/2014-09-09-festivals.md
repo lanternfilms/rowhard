@@ -7,6 +7,7 @@ title:  Festivals
 ---
 
 2007
+
 - Slamdance Film Festival 
 - True/False Film Festival
 - Bermuda International Film Festival
@@ -35,6 +36,7 @@ title:  Festivals
 - Anchorage International Film Festival
 
 2008
+
 - Wild and Scenic Environmental Film Festival
 - Spokane International Film Festival
 - San Francisco IndieFest

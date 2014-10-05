@@ -1,6 +1,22 @@
 <script src="/assets/js/vendor/jquery.js"></script>
 <script src="/assets/js/foundation.min.js"></script>
 <script>
-  $(document).foundation();
-  $('html').removeClass('no-js');
+$(document).foundation();
+$('html').removeClass('no-js');
+$(document).ready(function(){
+	setNavigation();
+});
+
+function setNavigation() {
+	var path = window.location.pathname;
+    path = path.replace(/\/$/, "");
+    path = decodeURIComponent(path);
+
+    $(".side-nav li a").each(function () {
+        var href = $(this).attr('href');
+        if (path.substring(0, href.length) === href) {
+            $(this)	.closest('li').addClass('active');
+        }
+    });
+}
 </script>
