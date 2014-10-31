@@ -475,4 +475,22 @@ a.active   { color: #F00; text-decoration: underline; }
   color:#900;
 }
 
+p.laurels {
+  display:block;
+  margin:0;
+  padding:0; 
+}
 
+p.laurels img {
+  margin:0;
+  padding:0; 
+  display:inline-block;
+  width:130px;
+}
+
+[class*="block-grid-"] > li {
+  display: block;
+  height: auto;
+  float: left;
+  padding: 0; 
+}
