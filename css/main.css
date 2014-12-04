@@ -52,6 +52,16 @@ a:hover   { color: #F00; text-decoration: underline; }
 a:visited { /* color: #205caa; */ }
 a.active   { color: #F00; text-decoration: underline; }
 
+p {
+    margin-bottom:20px;
+    margin-bottom:1.25rem;
+}
+img {
+    height: auto !important;
+    max-width: 100%;
+    width: auto;
+}
+
 /* Utility */
 
 .wrap:before,
@@ -68,7 +78,11 @@ a.active   { color: #F00; text-decoration: underline; }
 .row {
     max-width:1200px;
 }
-
+.lt-ie9 .column,
+.lt-ie9 .columns {
+    padding-left:15px;
+    padding-right:15px;
+}
 
 /* Layout Styles */
 /* ----------------------------------------------------------*/
@@ -77,6 +91,7 @@ a.active   { color: #F00; text-decoration: underline; }
 
 @media screen and (min-width:480px) {
   .branding {
+    padding-right:30px;
     padding-right:1.875rem;
   }
 }
@@ -541,7 +556,12 @@ ul.tabs {
        margin-left:0;
    } 
 }
-
+.tabs-content > .content {
+  padding-top:15px;
+  padding-bottom:15px;
+  padding-top:.9375rem;
+  padding-bottom:.9375rem;
+}
 .tabs-content .content .active {
   display:block;
 }
@@ -578,10 +598,11 @@ ul.tabs {
   font-weight: 500;
   font-size:18px;
   font-size:1.125rem;
-  color:#6c8e9d;
+  color:#698fa0;
   color:rgba(0,0,0,.3);
   line-height:1.25;
 }
+
 
 
 .side-nav li.active > a:first-child:not(.button), .side-nav li a:not(.button):hover {
@@ -590,6 +611,19 @@ ul.tabs {
   color:#790b0c;
   text-decoration:none;
   background:none;
+}
+.lt-ie9 .side-nav li {
+    line-height:1.25;
+}
+.lt-ie9 .side-nav li a {
+    color:#698fa0;
+    font-weight: 600;
+}
+.lt-ie9 .side-nav li.active a,
+.lt-ie9 .side-nav li a:hover {
+    color:#790b0c;
+    font-weight: 600;
+    text-decoration:none;
 }
 
 p.laurels {
