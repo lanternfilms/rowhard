@@ -1,56 +1,16 @@
-<!DOCTYPE html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" >
+{% include doctype.html %}
 {% include head.html %}
 <body>
   <div class="row">
-    <div class="large-12 columns" id="header" style="height:50px;">
-    &nbsp;
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-7 columns">
-      <div class="row">
-        <div class="large-8 columns">
-             <h1><a href="/"><img src="/images/logo.png" width="500"></a></h1>
-        </div>        
-        <div class="large-4 columns">
-            {% include nav.html %}
-            <ul class="side-nav">
-                <li><a href="/trailer">Trailer</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/photos">Photos</a></li>
-                <li><a href="/press">Press</a></li>
-                <li><a href="/screenings">Screenings</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/buy">Buy the DVD</a></li>
-            </dl>
-        </div>
-      </div>      
-      <div class="row">
-          <div class="large-12 columns">
-            <ul class="small-block-grid-4">
-              <li><img src="/images/laurel-01-new-hampshire.png"></li>
-              <li><img src="/images/laurel-02-international.png"></li>
-              <li><img src="/images/laurel-03-mountainfilm.png"></li>
-              <li><img src="/images/laurel-04-independent.png"></li>
-              <li><img src="/images/laurel-05-nantucket.png"></li>
-              <li><img src="/images/laurel-06-film.png"></li>
-              <li><img src="/images/laurel-07-jackson.png"></li>
-              <li><img src="/images/laurel-08-indiefest.png"></li>
-            </ul>
-            <p><img src=""> &copy; 2014 Lantern Films</p>
-          </div>
-      </div>
-    </div>
-    <div class="large-5 columns" id="maincontent">
+{% include masthead.html %}
+    <div class="medium-12 large-5 columns maincontent" id="maincontent">
       <div class="tabs-content">
       {{ content }}
       </div><!-- end .tabs-content -->
     </div><!-- end #maincontent -->
   </div><!-- end .row -->
-{% include footer.html %}
 
+{% include footer.html %}
 {% include scripts.html %}
 </body>
 </html>

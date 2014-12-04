@@ -1,10 +1,41 @@
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8" />
+
   <title>{{ page.title }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!--[if IEMobile]>
+  <meta http-equiv="cleartype" content="on" />
+  <![endif]-->
+
+  <link rel="stylesheet" href="/assets/css/webfonts.css">
   <link rel="stylesheet" href="/assets/css/normalize.css">
   <link rel="stylesheet" href="/assets/css/foundation.css">
   <link rel="stylesheet" href="/assets/css/overrides.css">
   <link rel="stylesheet" href="/css/main.css">
-	<script type="text/javascript" src="/assets/js/vendor/modernizr.js"></script>
+
+  <script type="text/javascript" src="/assets/js/vendor/modernizr.js"></script>
+
+  <!-- Detect IE10 and insert a CSS class in the HTML element -->
+  <!--[if !IE]><!--><script>
+  if (/*@cc_on!@*/false) {
+      document.documentElement.className+=' ie10';
+  }
+  </script><!--<![endif]-->
+
+  <!-- Responsive fix for certain Windows phones -->
+  <script>
+  (function() {
+      if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+          var msViewportStyle = document.createElement("style");
+          msViewportStyle.appendChild(
+              document.createTextNode("@-ms-viewport{width:auto!important}")
+          );
+          document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+      }
+  })();
+  </script>
 </head>

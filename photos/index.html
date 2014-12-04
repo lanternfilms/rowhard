@@ -3,11 +3,11 @@ layout: section
 title: Photos
 ---
 
-<dl class="tabs horizontal" data-tab>
+<ul class="tabs horizontal" data-tab>
 {% for post in site.categories.photos %}
-<dd><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></dd>
+<li class="tab-title{% if forloop.first == true %} active {% endif %}"><a href="#{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></li>
 {% endfor %}
-</dl>
+</ul>
 <div id="photos" class="contentblock">
   <div class="tabs-content horizontal">
     {% for post in site.categories.photos %}
