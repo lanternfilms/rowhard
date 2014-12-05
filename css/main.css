@@ -8,28 +8,86 @@
 
 html {
   -ms-overflow-style: scrollbar;
+  overflow-y:scroll;
 }
 
 html, body { height: 100%; }
 
+/* Sticky footer */
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 300;
-  background-color: #fdfdfd;
-  background-image: url("/images/background.png");
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  vertical-align: auto;
-  padding-top:20px;
+    display:table;
+    table-layout:fixed;
+    width:100%;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    background-color: #000;
+    vertical-align: auto;
+    padding-top:10px;
 }
 
-@media screen and (min-width: 40.063em) {
+@media screen and (min-width: 768px) {
+  body {
+    padding-top:25px;
+  }
+}
+@media screen and (min-width: 1025px) {
   body {
     padding-top:50px;
+  }
+}
+
+body > .row:first-child,
+body > .footer-wrapper {
+    display:table-row;
+    height:1px;
+}
+body > .row:first-child {
+    height:100%;
+}
+
+/* Background div, to thwart iOS problems with fixed backgrounds */
+.bg {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    height:100%;
+    min-height:320px;
+    width:100%;
+    background-color: #000;
+    background-image: url("/images/background.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    z-index:-1;
+}
+
+
+@media screen and (orientation:portrait) {
+  .bg {
+      background-size:150% auto;
+      background-position:50% 0;
+  }
+}
+@media screen and (min-width: 480px) and (orientation:portrait) {
+  .bg {
+      background-size:110% auto;
+      background-position:50% -5%;
+  }
+}
+@media screen and (min-width: 768px) and (orientation:portrait) {
+  .bg {
+      background-size:100% auto;
+      background-position:50% -5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bg {
+    min-height:768px;
   }
 }
 
@@ -59,7 +117,15 @@ p {
 img {
     height: auto !important;
     max-width: 100%;
-    width: auto;
+    display:block;
+}
+/* temp */
+.clearing-thumbs li {
+    float:none;
+    margin-right:0;
+}
+.clearing-thumbs a {
+    display:block;
 }
 
 /* Utility */
@@ -75,8 +141,10 @@ img {
 }
 
 /* Foundation overrides */
-.row {
+.inner {
     max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
 }
 .lt-ie9 .column,
 .lt-ie9 .columns {
@@ -91,37 +159,54 @@ img {
 
 @media screen and (min-width:480px) {
   .branding {
-    padding-right:30px;
-    padding-right:1.875rem;
+    
+    max-width:55%;
+    float:left;
+  }
+  .mainnav {
+      float:right;
+      max-width:45%;
+  }
+}
+@media screen and (min-width:768px) {
+  .branding {
+      padding-right:30px;
+      padding-right:1.875rem;
+  }
+  .branding,
+  .mainnav {
+      max-width:none;
+  }
+  .mainnav {
+      float:left;
   }
 }
 .branding h1 {
     max-width:500px;
 }
+.branding img {
+    display:block;
+}
 
 /* New footer */
 .footer-wrapper {
     color:#999;
-    color:rgba(255,255,255,.25);
+    color:rgba(255,255,255,.3);
 }
 .footer-wrapper p {
     font-size:80%;
-}
-@media screen and (min-width:64.063em) and (min-height:390px) {
-  .footer-wrapper {
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index:1;
-  }
 }
 .maincontent {
   position:relative;
   z-index:2;
   margin-top:30px;
 }
-@media screen and (min-width: 64.063em) {
+@media screen and (min-width: 768px) {
+  .maincontent {
+    margin-top:300px;
+  }
+}
+@media screen and (min-width: 1025px) {
   .maincontent {
     margin-top:0;
   }
@@ -551,7 +636,7 @@ ul.tabs {
 }
 
 
-@media screen and (min-width:400px) {
+@media screen and (min-width:432px) {
    .tabs.horizontal .tab-title:first-child {
        margin-left:0;
    } 
@@ -596,13 +681,19 @@ ul.tabs {
 .side-nav li a:not(.button) {
   padding:0;
   font-weight: 500;
-  font-size:18px;
-  font-size:1.125rem;
+  font-size:14px;
+  font-size:0.875rem;
   color:#698fa0;
   color:rgba(0,0,0,.3);
   line-height:1.25;
+  text-shadow:1px 1px 1px rgba(255,255,255,.3);
 }
-
+@media screen and (min-width: 40.063em) {
+    .side-nav li a:not(.button) {
+      font-size:18px;
+      font-size:1.125rem;
+    }
+}
 
 
 .side-nav li.active > a:first-child:not(.button), .side-nav li a:not(.button):hover {

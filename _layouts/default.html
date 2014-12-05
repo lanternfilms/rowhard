@@ -2,15 +2,18 @@
 {% include head.html %}
 <body>
   <div class="row">
+    <div class="inner clearfix">
 {% include masthead.html %}
-    <div class="medium-12 large-5 columns maincontent" id="maincontent">
-      <div class="tabs-content">
-      {{ content }}
-      </div><!-- end .tabs-content -->
-    </div><!-- end #maincontent -->
+      <div class="large-5 columns maincontent" id="maincontent">
+        <div class="tabs-content">
+          {{ content }}
+        </div><!-- end .tabs-content -->
+      </div><!-- end #maincontent -->
+    </div><!-- end .inner -->
   </div><!-- end .row -->
 
 {% include footer.html %}
 {% include scripts.html %}
+<div class="bg"></div> <!-- do not delete -->
 </body>
 </html>

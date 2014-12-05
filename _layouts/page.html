@@ -1,23 +1,19 @@
-<!DOCTYPE html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" >
+{% include doctype.html %}
 {% include head.html %}
 <body>
   <div class="row">
-    <div class="large-6 columns" id="brand">
-    {% include brand.html %}
-    </div>
-    <!-- end brand column -->
-    <div class="large-6 columns" id="maincontent">
-    {% include nav.html %}
-    </div>
-    <!-- end content column -->
-    <div class="large-4 columns" id="content">
-    {{ content }}
-    </div>
- </div>
- <!-- end content row -->
+    <div class="inner clearfix">
+{% include masthead.html %}
+      <div class="large-5 columns maincontent" id="maincontent">
+        <div class="tabs-content">
+          {{ content }}
+        </div><!-- end .tabs-content -->
+      </div><!-- end #maincontent -->
+    </div><!-- end .inner -->
+  </div><!-- end .row -->
+
 {% include footer.html %}
 {% include scripts.html %}
+<div class="bg"></div> <!-- do not delete -->
 </body>
 </html>
