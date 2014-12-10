@@ -801,10 +801,13 @@ ul.tabs {
   font-weight: 500;
   font-size:14px;
   font-size:0.875rem;
-  color:#698fa0;
-  color:rgba(0,0,0,.3);
+  /* color:#698fa0;
+  color:rgba(0,0,0,.3); */
+  color:#fff;
+  color:rgba(255,255,255,.9);
   line-height:1.25;
-  text-shadow:1px 1px 1px rgba(255,255,255,.3);
+  /*text-shadow:1px 1px 1px rgba(255,255,255,.3);*/
+  text-shadow:1px 1px 1px rgba(0,0,0,.5);
 }
 @media screen and (min-width: 40.063em) {
     .side-nav li a:not(.button) {
@@ -826,7 +829,7 @@ ul.tabs {
     line-height:1.25;
 }
 .lt-ie9 .side-nav li a {
-    color:#698fa0;
+    color:#fff;
     font-weight: 600;
 }
 .lt-ie9 .side-nav li.active a,
