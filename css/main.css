@@ -186,6 +186,9 @@ img {
     margin-left:auto;
     margin-right:auto;
 }
+.footer-wrapper .row {
+    max-width:1200px;
+}
 .lt-ie9 .column,
 .lt-ie9 .columns {
     padding-left:15px;
@@ -711,7 +714,10 @@ ul.tabs {
 .tabs.horizontal .tab-title {
   padding: 0 4px;
   border: none; 
-  background-color: #999;
+  /*background-color: #999;*/
+  background-color:transparent;
+  background-color:rgba(121,11,12,0);
+
   text-transform:uppercase;
   letter-spacing:1px;
   -webkit-font-smoothing: antialiased;
@@ -720,18 +726,27 @@ ul.tabs {
   -moz-osx-font-smoothing: grayscale;
   margin-left:5px;
   margin-bottom:2px !important;
-}
-
-.tabs.horizontal .tab-title:hover {
-  background-color:#888;
+  
   -webkit-transition: background-color, 0.1s, linear, color, 0.1s, linear;
   -moz-transition: background-color, 0.1s, linear, color, 0.1s, linear;
   transition: background-color, 0.1s, linear, color, 0.1s, linear;
 }
 
+.tabs.horizontal .tab-title:hover,
+.tabs.horizontal .tab-title.active {
+  /*background-color:#888;*/
+  background-color:#790b0c;
+  background-color:rgba(121,11,12,1);
+}
+
 .tabs.horizontal .tab-title > a {
     font-size:12px;
     font-size:0.875rem;
+    color:#790b0c;
+}
+.tabs.horizontal .tab-title > a:hover,
+.tabs.horizontal .tab-title.active > a {
+    color:#fff;
 }
 
 
