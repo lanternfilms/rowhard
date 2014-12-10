@@ -733,10 +733,12 @@ ul.tabs {
 }
 
 .tabs.horizontal .tab-title:hover,
+.tabs.horizontal .tab-title:hover > a,
 .tabs.horizontal .tab-title.active {
   /*background-color:#888;*/
   background-color:#790b0c;
   background-color:rgba(121,11,12,1);
+  color:#fff;
 }
 
 .tabs.horizontal .tab-title > a {
