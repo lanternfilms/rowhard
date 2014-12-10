@@ -469,6 +469,65 @@ img {
 
 .post pre.terminal code { background-color: #333; }
 
+
+/* Trailer and modal styles */
+/* ----------------------------------------------------------*/
+.trailer-smallerscreens {
+  display:block;  
+}
+.trailer-largerscreens {
+  display:none; 
+}
+  @media screen and (min-width: 1025px) {
+    .trailer-smallerscreens {
+      display:none;  
+    }
+    .trailer-largerscreens {
+      display:block; 
+    }
+  }
+.trailer-trigger {
+    display:block;
+    margin:0 auto;
+    max-width: 596px;
+}
+.reveal-modal,
+dialog {
+    width:100%;
+    min-height:100%;
+    padding:30px;
+}
+.reveal-modal .flex-video {
+    background-color:#fff;
+    margin-bottom:0;
+}
+
+.reveal-modal .close-reveal-modal, 
+dialog .close-reveal-modal {
+  line-height:.85;
+  font-size: 40px;
+  top: 0;
+  right: .1em;
+}
+  .reveal-modal .close-reveal-modal:hover, 
+  dialog .close-reveal-modal:hover {
+    text-decoration:none;
+  }
+
+@media screen and (min-width: 641px) {
+
+  .reveal-modal,
+  dialog {
+      min-height:0;
+  }
+
+  .reveal-modal.large,
+  dialog.large {
+      width:70%;
+      max-width: 62.5em;
+  }
+}
+
 /* Syntax highlighting styles */
 /* ----------------------------------------------------------*/
 
