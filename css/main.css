@@ -121,6 +121,11 @@ img {
     display:block;
 }
 /* Photo thumbnails */
+.clearing-blackout,
+.clearing-assembled .clearing-container .visible-img,
+.clearing-assembled .clearing-container .carousel {
+    background:#000;
+}
 .clearing-thumbs {
   position:relative;
   margin-left:-10px;
@@ -431,14 +436,18 @@ img {
   letter-spacing: -1px;
 }
 
-.post-content blockquote {
-  border-left: 4px solid #e8e8e8;
+blockquote {
+  border-left: none;
   padding-left: 20px;
   font-size: 18px;
-  opacity: .6;
-  letter-spacing: -1px;
-  font-style: italic;
-  margin: 30px 0;
+  opacity: 1;
+  letter-spacing: 0;
+  margin: 0 0 30px;
+}
+
+blockquote,
+blockquote p {
+    color:inherit;
 }
 
 .post-content ul,
@@ -495,6 +504,9 @@ img {
     display:block;
     margin:0 auto;
     max-width: 596px;
+}
+.reveal-modal-bg {
+    background:#000;
 }
 .reveal-modal,
 dialog {
