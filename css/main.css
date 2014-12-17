@@ -94,10 +94,11 @@ body > .row {
 }
 @media screen and (min-width:1200px) {
     .altbg .bg {
+        background-image:url("/images/background-cropped.jpg");
         left:50%;
-        width:1600px;
+        width:1280px;
         height:800px;
-        margin-left:-800px;
+        margin-left:-640px;
         right:auto;
         background-size:auto;
         background-position:50% 50%;
