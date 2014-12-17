@@ -1,0 +1,111 @@
+---
+layout: default
+title: Home
+bodyclass: altbg
+---
+
+<div class="content" id="home">
+  <ul class="tabs horizontal" data-tab>
+    {% for post in site.categories.home %}
+    <li class="tab-title{% if forloop.first == true %} active {% endif %}"><a href="#tab-{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.home %}
+    <div class="content" id="tab-{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+<div class="content" id="photos">
+  <ul class="tabs horizontal" data-tab>
+    {% for post in site.categories.photos %}
+    <li class="tab-title{% if forloop.first == true %} active {% endif %}"><a href="#tab-{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.photos %}
+    <div class="content" id="tab-{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="content" id="trailer">
+  <ul class="tabs horizontal" data-tab>
+    {% for post in site.categories.trailer %}
+    <li class="tab-title{% if forloop.first == true %} active {% endif %}"><a href="#tab-{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.trailer %}
+    <div class="content" id="tab-{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="content" id="screenings">
+  <ul class="tabs horizontal" data-tab>
+    {% for post in site.categories.screenings %}
+    <li class="tab-title{% if forloop.first == true %} active {% endif %}"><a href="#tab-{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.screenings %}
+    <div class="content" id="tab-{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="content" id="press">
+  <ul class="tabs horizontal" data-tab>
+    {% for post in site.categories.press %}
+    <li class="tab-title{% if forloop.first == true %} active {% endif %}"><a href="#tab-{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.press %}
+    <div class="content" id="tab-{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="content" id="contact">
+  <ul class="tabs horizontal" data-tab>
+    {% for post in site.categories.contact %}
+    <li class="tab-title{% if forloop.first == true %} active {% endif %}"><a href="#tab-{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.contact %}
+    <div class="content" id="tab-{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="content" id="buy">
+  <ul class="tabs horizontal" data-tab>
+    {% for post in site.categories.buy %}
+    <li class="tab-title{% if forloop.first == true %} active {% endif %}"><a href="#tab-{{ post.title | downcase | split: " " | join: "-" }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <div class="tabs-content horizontal">
+    {% for post in site.categories.buy %}
+    <div class="content" id="tab-{{ post.title | downcase | split: " " | join: "-" }}">
+      {{ content }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
