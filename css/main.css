@@ -58,19 +58,33 @@ body > .row {
     min-height:320px;
     width:100%;
     background-color: #000;
-    background-image: url("/images/background.jpg");
-    background-position: 50% 50%;
-    background-size: cover;
+    background-image: url("/images/background-mobile.jpg");
+    /* background-position: 50% 50%; */
+    /* background-size: cover; */
+    background-position:0 0;
+    background-size:100% auto;
     background-attachment: scroll;
     background-repeat: no-repeat;
 }
   .touchcapable .bg {
     position:absolute;
-    background-size:100% auto;
-    background-position:50% -5%;
+    /*  background-size:100% auto;
+    background-position:50% -5%;*/
   }
 
+@media screen and (min-width: 481px) {
+  .bg {
+    background-image: url("/images/background-tablet.jpg");
+  }
+}
 
+@media screen and (min-width:769px) {
+  .bg {
+    background-image:url("/images/background-cropped.jpg");
+  }
+}
+
+/*
 @media screen and (orientation:portrait) {
   .bg,
   .touchcapable .bg {
@@ -88,12 +102,15 @@ body > .row {
 @media screen and (min-width: 768px) and (orientation:portrait) {
   .bg,
   .touchcapable .bg {
+      background-image: url("/images/background.jpg");
       background-size:100% auto;
       background-position:50% -5%;
   }
 }
+*/
 @media screen and (min-width:1200px) {
-    .altbg .bg {
+    .bg,
+    .touchcapable .bg {
         background-image:url("/images/background-cropped.jpg");
         left:50%;
         width:1280px;
@@ -102,7 +119,6 @@ body > .row {
         right:auto;
         background-size:auto;
         background-position:50% 50%;
-        
     }
 }
 
@@ -219,34 +235,37 @@ img {
 /* ----------------------------------------------------------*/
 
 /* Branding */
+.branding {
+  max-width:409px;
+  margin-left:auto;
+  margin-right:auto;
+  float:none;
+}
+.mainnav {
+    float:right;
+    width:165px;
+}
 
 @media screen and (min-width:480px) {
   .branding {
-    
-    max-width:55%;
-    float:left;
-  }
-  .mainnav {
-      float:right;
-      max-width:45%;
+    padding:0;
   }
 }
 @media screen and (min-width:768px) {
   .branding {
-      padding-right:30px;
-      padding-right:1.875rem;
-  }
-  .branding,
-  .mainnav {
-      max-width:none;
-  }
-  .mainnav {
       float:left;
+      margin-left:0;
+      margin-right:30px;
+      margin-right:1.875rem;
+      padding-left:15px;
+      max-width:424px;
+  }
+  .mainnav {
+    float:left;
   }
 }
-.branding h1 {
-    max-width:500px;
-}
+
+
 .branding img {
     display:block;
 }
@@ -269,9 +288,16 @@ img {
     margin-top:300px;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   .maincontent {
     margin-top:0;
+    max-width:390px;
+    padding-left:0;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .maincontent {
+    max-width:none;
   }
 }
 
@@ -505,7 +531,7 @@ blockquote p {
 .trailer-largerscreens {
   display:none; 
 }
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1026px) {
     .trailer-smallerscreens {
       display:none;  
     }
@@ -751,7 +777,7 @@ ul.tabs {
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-left:5px;
+  margin-left:1px;
   margin-bottom:2px !important;
   
   -webkit-transition: background-color, 0.1s, linear, color, 0.1s, linear;
@@ -784,6 +810,7 @@ ul.tabs {
        margin-left:0;
    } 
 }
+
 .tabs-content > .content {
   padding-top:15px;
   padding-bottom:15px;
@@ -826,21 +853,20 @@ ul.tabs {
   font-weight: 500;
   font-size:14px;
   font-size:0.875rem;
-  /* color:#698fa0;
-  color:rgba(0,0,0,.3); */
   color:#fff;
   color:rgba(255,255,255,.9);
   line-height:1.25;
-  /*text-shadow:1px 1px 1px rgba(255,255,255,.3);*/
   text-shadow:1px 1px 1px rgba(0,0,0,.5);
 }
 @media screen and (min-width: 40.063em) {
     .side-nav li a:not(.button) {
       font-size:18px;
       font-size:1.125rem;
+      color:#698fa0;
+      color:rgba(0,0,0,.3);
+      text-shadow:1px 1px 1px rgba(255,255,255,.3);
     }
 }
-
 
 .side-nav li.active > a:first-child:not(.button), .side-nav li a:not(.button):hover {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
