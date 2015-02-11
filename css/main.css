@@ -13,11 +13,7 @@ html {
 
 html, body { height: 100%; }
 
-/* Sticky footer */
 body {
-    display:table;
-    table-layout:fixed;
-    width:100%;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -32,20 +28,31 @@ body {
     padding-top:25px;
   }
 }
+
+@media screen and (min-width:769px) {
+  /* Sticky footer */
+  body {
+      display:table;
+      table-layout:fixed;
+      width:100%;
+  }
+  body > .row,
+  body > .footer-wrapper {
+      display:table-row;
+      height:1px;
+  }
+  body > .row {
+      height:100%;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   body {
     padding-top:50px;
   }
 }
 
-body > .row,
-body > .footer-wrapper {
-    display:table-row;
-    height:1px;
-}
-body > .row {
-    height:100%;
-}
+
 
 /* Background div, to thwart iOS problems with fixed backgrounds */
 .bg {
