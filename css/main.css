@@ -108,9 +108,14 @@ body > .row {
   }
 }
 */
+
+@media screen and (min-width:1024px) {
+  .bg {
+    background-position:0 -80px;
+  }
+}
 @media screen and (min-width:1200px) {
-    .bg,
-    .touchcapable .bg {
+    .bg {
         background-image:url("/images/background-cropped.jpg");
         left:50%;
         width:1280px;
